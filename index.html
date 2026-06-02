@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AudioSync | Sync WAV Files To Video Automatically</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--accent:#ff7a1a;--bg:#050505;--card:#111;--text:#fff;--secondary:#bdbdbd;}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:Inter,sans-serif;background:var(--bg);color:var(--text);line-height:1.6}
+.container{width:90%;max-width:1200px;margin:auto}
+.hero{min-height:100vh;display:flex;align-items:center;justify-content:center;text-align:center;padding:80px 0}
+.badge{display:inline-block;padding:12px 20px;border-radius:999px;border:1px solid rgba(255,122,26,.3);color:var(--accent);margin-bottom:25px}
+h1{font-size:clamp(3rem,8vw,6rem);line-height:1;margin-bottom:20px}
+.highlight{color:var(--accent)}
+.hero p{max-width:850px;margin:25px auto;color:var(--secondary)}
+.buttons{display:flex;justify-content:center;gap:15px;flex-wrap:wrap;margin-top:30px}
+.btn{padding:16px 30px;border-radius:12px;text-decoration:none;font-weight:700}
+.btn-primary{background:var(--accent);color:white}
+.btn-secondary{border:1px solid #333;color:white}
+section{padding:70px 0}
+.section-title{text-align:center;font-size:2rem;margin-bottom:30px}
+.card{background:var(--card);padding:25px;border-radius:16px}
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.features{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:20px}
+.feature{background:var(--card);padding:20px;border-radius:12px}
+pre{background:#000;padding:15px;border-radius:10px;overflow:auto;margin-top:10px}
+code{color:var(--accent)}
+.warning{border:1px solid rgba(255,122,26,.3);padding:20px;border-radius:12px;text-align:center}
+.footer{text-align:center;padding:40px;color:#777}
+@media(max-width:900px){.steps{grid-template-columns:1fr 1fr}}
+@media(max-width:600px){.steps{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<div class="container">
+
+<section class="hero">
+<div>
+<div class="badge">⚠ Warning: May significantly reduce swearing during the editing process.</div>
+<h1>Sync WAV Files To Video <span class="highlight">Automatically</span></h1>
+
+<p>
+Ever come back from a shoot with 50 video clips, 20 WAV files and absolutely no idea which audio belongs to what?
+AudioSync takes the faff out of syncing separate audio recordings to your footage. Point it at a folder full of video clips and WAV files, put the kettle on, and let it work out which files belong together.
+No subscriptions. No cloud uploads. No Adobe-style monthly hostage situation.
+</p>
+
+<div class="buttons">
+<a href="https://raw.githubusercontent.com/theollieallin/AudioSync/main/audiosync.py" class="btn btn-primary">⬇ Download Here</a>
+<a href="#quickstart" class="btn btn-secondary">📖 Installation Guide</a>
+</div>
+</div>
+</section>
+
+<section id="quickstart">
+<h2 class="section-title">Get Started In 4 Steps</h2>
+<div class="steps">
+<div class="card"><h3>① Install Python</h3><pre><code>brew install python</code></pre></div>
+<div class="card"><h3>② Install FFmpeg</h3><pre><code>brew install ffmpeg</code></pre></div>
+<div class="card"><h3>③ Install NumPy</h3><pre><code>python3 -m pip install numpy</code></pre></div>
+<div class="card"><h3>④ Run AudioSync</h3><pre><code>python3 audiosync.py "/Your/Folder"</code></pre></div>
+</div>
+</section>
+
+<section>
+<h2 class="section-title">Why AudioSync?</h2>
+<div class="card">
+<p>Ever come back from a shoot with 50 video clips, 20 WAV files and absolutely no idea which audio belongs to what?</p><br>
+<p>AudioSync analyses waveforms, calculates sync offsets, and organises everything ready for DaVinci Resolve.</p><br>
+<p>No subscriptions. No cloud uploads. No Adobe-style monthly hostage situation.</p>
+</div>
+</section>
+
+<section>
+<h2 class="section-title">Features</h2>
+<div class="features">
+<div class="feature">✅ Automatically Matches WAV Files</div>
+<div class="feature">✅ Frame Accurate Sync Offsets</div>
+<div class="feature">✅ Works With DJI Mic Recordings</div>
+<div class="feature">✅ Organises Footage For DaVinci Resolve</div>
+<div class="feature">✅ Supports MP4, MOV, MXF & WAV</div>
+<div class="feature">✅ Never Touches Original Footage</div>
+</div>
+</section>
+
+<section>
+<div class="warning"><strong>Warning:</strong> May significantly reduce swearing during the editing process.</div>
+</section>
+
+<section>
+<h2 class="section-title">Common Problems</h2>
+<div class="steps">
+<div class="card"><h3>No module named numpy</h3><pre><code>python3 -m pip install numpy</code></pre></div>
+<div class="card"><h3>ffmpeg not found</h3><pre><code>brew install ffmpeg</code></pre></div>
+<div class="card"><h3>python3 not found</h3><pre><code>brew install python</code></pre></div>
+<div class="card"><h3>Find Folder Path</h3><p>Drag your footage folder into Terminal.</p></div>
+</div>
+</section>
+
+<div class="footer">AudioSync • Built for videographers, weddings, events, documentaries and skydiving projects.</div>
+</div>
+</body>
+</html>
